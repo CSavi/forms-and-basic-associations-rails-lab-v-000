@@ -1,4 +1,4 @@
-require 'roy'
+require 'pry'
 class SongsController < ApplicationController
   def index
     @songs = Song.all
@@ -15,7 +15,7 @@ class SongsController < ApplicationController
   def create
      binding.pry
     @song = Song.new(song_params)
-   
+
     if @song.save
       redirect_to @song
     else
