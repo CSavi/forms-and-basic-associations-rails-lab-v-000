@@ -1,3 +1,4 @@
+require 'roy'
 class SongsController < ApplicationController
   def index
     @songs = Song.all
