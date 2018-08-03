@@ -26,12 +26,12 @@ class Song < ActiveRecord::Base
       unless content == ""
         note = Note.create(content: content)
         self.notes << note
-      end   
+      end
     end
   end
 
   def note_contents
-
+    self.notes
   end
 
   private
